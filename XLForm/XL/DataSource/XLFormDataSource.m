@@ -7,6 +7,7 @@
 //
 #import "XLFormDataSource.h"
 #import "ExpandFormSectionDescriptor.h"
+#import "XLFormRowDescriptor.h"
 
 @interface XLFormRowDescriptor(_XLFormDataSource)
 
@@ -131,7 +132,9 @@
 -(void)didSelectFormRow:(XLFormRowDescriptor *)formRow
 {
     if ([[formRow cellForTableView:self.tableView] respondsToSelector:@selector(formDescriptorCellDidSelectedWithFormController:)]){
-        [[formRow cellForTableView:self.tableView] formDescriptorCellDidSelectedWithFormController:self.viewController];
+        if (self.tableView && self.viewController) {
+            [[formRow cellForTableView:self.tableView] formDescriptorCellDidSelectedWithFormController:self.viewController];
+        }
     }
     [self deselectFormRow:formRow];
 }

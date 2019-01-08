@@ -42,7 +42,7 @@
 +(CGFloat)formDescriptorCellHeightForRowDescriptor:(XLFormRowDescriptor *)rowDescriptor;
 -(BOOL)formDescriptorCellCanBecomeFirstResponder;
 -(BOOL)formDescriptorCellBecomeFirstResponder;
--(void)formDescriptorCellDidSelectedWithFormController:(XLFormViewController *)controller;
+-(void)formDescriptorCellDidSelectedWithFormController:(UIViewController *)controller;
 -(NSString *)formDescriptorHttpParameterName;
 
 

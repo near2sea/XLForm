@@ -71,6 +71,9 @@ typedef void(^XLOnChangeBlock)(id __nullable oldValue,id __nullable newValue,XLF
 @property (nonatomic, readonly, nonnull) NSMutableDictionary * cellConfigIfDisabled;
 @property (nonatomic, readonly, nonnull) NSMutableDictionary * cellConfigAtConfigure;
 
+//新加的属性
+@property (nonatomic, weak) UITableView *tableView;
+
 @property (nonnull) id disabled;
 -(BOOL)isDisabled;
 @property (nonnull) id hidden;
@@ -86,6 +89,7 @@ typedef void(^XLOnChangeBlock)(id __nullable oldValue,id __nullable newValue,XLF
 -(nonnull instancetype)initWithTag:(nullable NSString *)tag rowType:(nonnull NSString *)rowType title:(nullable NSString *)title;
 
 -(nonnull XLFormBaseCell *)cellForFormController:(nonnull XLFormViewController *)formController;
+-(nonnull XLFormBaseCell *)cellForTableView:(UITableView *_Nullable)tableView;
 
 @property (nullable) NSString *requireMsg;
 -(void)addValidator:(nonnull id<XLFormValidatorProtocol>)validator;
