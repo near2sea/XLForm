@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6442F6501C1FC3AA00C9152F /* XLFormImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6442F64E1C1FC3AA00C9152F /* XLFormImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6442F6511C1FC3AA00C9152F /* XLFormImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6442F64F1C1FC3AA00C9152F /* XLFormImageCell.m */; };
+		CAD6586E21E4345700F33F22 /* XLFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD6586C21E4345700F33F22 /* XLFormDataSource.m */; };
+		CAD6586F21E4345700F33F22 /* XLFormDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD6586D21E4345700F33F22 /* XLFormDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E267FD7C1BE804E200F86B42 /* XLFormBaseCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E267FD2C1BE804E200F86B42 /* XLFormBaseCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E267FD7D1BE804E200F86B42 /* XLFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E267FD2D1BE804E200F86B42 /* XLFormBaseCell.m */; };
 		E267FD7E1BE804E200F86B42 /* XLFormButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E267FD2E1BE804E200F86B42 /* XLFormButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,6 +92,8 @@
 /* Begin PBXFileReference section */
 		6442F64E1C1FC3AA00C9152F /* XLFormImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormImageCell.h; sourceTree = "<group>"; };
 		6442F64F1C1FC3AA00C9152F /* XLFormImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFormImageCell.m; sourceTree = "<group>"; };
+		CAD6586C21E4345700F33F22 /* XLFormDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFormDataSource.m; sourceTree = "<group>"; };
+		CAD6586D21E4345700F33F22 /* XLFormDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormDataSource.h; sourceTree = "<group>"; };
 		E267FD201BE8048900F86B42 /* XLForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E267FD251BE8048900F86B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E267FD2C1BE804E200F86B42 /* XLFormBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormBaseCell.h; sourceTree = "<group>"; };
@@ -181,6 +185,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CAD6586B21E4345700F33F22 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CAD6586D21E4345700F33F22 /* XLFormDataSource.h */,
+				CAD6586C21E4345700F33F22 /* XLFormDataSource.m */,
+			);
+			name = DataSource;
+			path = XL/DataSource;
+			sourceTree = "<group>";
+		};
 		E267FD161BE8048900F86B42 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +214,7 @@
 		E267FD221BE8048900F86B42 /* XLForm */ = {
 			isa = PBXGroup;
 			children = (
+				CAD6586B21E4345700F33F22 /* DataSource */,
 				E267FD2B1BE804E200F86B42 /* Cell */,
 				E267FD4C1BE804E200F86B42 /* Controllers */,
 				E267FD541BE804E200F86B42 /* Descriptors */,
@@ -383,6 +398,7 @@
 				E267FD7C1BE804E200F86B42 /* XLFormBaseCell.h in Headers */,
 				E267FD861BE804E200F86B42 /* XLFormDescriptorCell.h in Headers */,
 				6442F6501C1FC3AA00C9152F /* XLFormImageCell.h in Headers */,
+				CAD6586F21E4345700F33F22 /* XLFormDataSource.h in Headers */,
 				E267FDA01BE804E200F86B42 /* XLFormRowDescriptorViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +502,7 @@
 				E267FD7F1BE804E200F86B42 /* XLFormButtonCell.m in Sources */,
 				E267FD911BE804E200F86B42 /* XLFormSelectorCell.m in Sources */,
 				E267FDA91BE804E200F86B42 /* XLFormSectionDescriptor.m in Sources */,
+				CAD6586E21E4345700F33F22 /* XLFormDataSource.m in Sources */,
 				6442F6511C1FC3AA00C9152F /* XLFormImageCell.m in Sources */,
 				E267FD971BE804E200F86B42 /* XLFormSwitchCell.m in Sources */,
 				E267FDC61BE804E200F86B42 /* XLForm.m in Sources */,
