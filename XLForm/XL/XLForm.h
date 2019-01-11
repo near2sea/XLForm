@@ -69,6 +69,9 @@
 #import "XLFormTextFieldCell.h"
 #import "XLFormTextViewCell.h"
 #import "XLFormImageCell.h"
+#import "XLFormDataSource.h"
+#import "ExpandFormSectionDescriptor.h"
+#import "XLScrollCell.h"
 
 //Validation
 #import "XLFormRegexValidator.h"

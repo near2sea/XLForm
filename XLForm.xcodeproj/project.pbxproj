@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6442F6501C1FC3AA00C9152F /* XLFormImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6442F64E1C1FC3AA00C9152F /* XLFormImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6442F6511C1FC3AA00C9152F /* XLFormImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6442F64F1C1FC3AA00C9152F /* XLFormImageCell.m */; };
+		CAD00DC721E84C37006AEF12 /* XLScrollCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD00DC521E84C37006AEF12 /* XLScrollCell.h */; };
+		CAD00DC821E84C37006AEF12 /* XLScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD00DC621E84C37006AEF12 /* XLScrollCell.m */; };
 		CAD6586E21E4345700F33F22 /* XLFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD6586C21E4345700F33F22 /* XLFormDataSource.m */; };
 		CAD6586F21E4345700F33F22 /* XLFormDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD6586D21E4345700F33F22 /* XLFormDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAD6587221E43D0400F33F22 /* ExpandFormSectionDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD6587021E43D0400F33F22 /* ExpandFormSectionDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -94,6 +96,8 @@
 /* Begin PBXFileReference section */
 		6442F64E1C1FC3AA00C9152F /* XLFormImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormImageCell.h; sourceTree = "<group>"; };
 		6442F64F1C1FC3AA00C9152F /* XLFormImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFormImageCell.m; sourceTree = "<group>"; };
+		CAD00DC521E84C37006AEF12 /* XLScrollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLScrollCell.h; sourceTree = "<group>"; };
+		CAD00DC621E84C37006AEF12 /* XLScrollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLScrollCell.m; sourceTree = "<group>"; };
 		CAD6586C21E4345700F33F22 /* XLFormDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFormDataSource.m; sourceTree = "<group>"; };
 		CAD6586D21E4345700F33F22 /* XLFormDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormDataSource.h; sourceTree = "<group>"; };
 		CAD6587021E43D0400F33F22 /* ExpandFormSectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandFormSectionDescriptor.h; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 		E267FD2B1BE804E200F86B42 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CAD00DC521E84C37006AEF12 /* XLScrollCell.h */,
+				CAD00DC621E84C37006AEF12 /* XLScrollCell.m */,
 				E267FD2C1BE804E200F86B42 /* XLFormBaseCell.h */,
 				E267FD2D1BE804E200F86B42 /* XLFormBaseCell.m */,
 				E267FD2E1BE804E200F86B42 /* XLFormButtonCell.h */,
@@ -379,6 +385,7 @@
 				E267FD821BE804E200F86B42 /* XLFormDateCell.h in Headers */,
 				E267FD801BE804E200F86B42 /* XLFormCheckCell.h in Headers */,
 				E267FD8E1BE804E200F86B42 /* XLFormSegmentedCell.h in Headers */,
+				CAD00DC721E84C37006AEF12 /* XLScrollCell.h in Headers */,
 				E267FD8A1BE804E200F86B42 /* XLFormLeftRightSelectorCell.h in Headers */,
 				E267FD921BE804E200F86B42 /* XLFormSliderCell.h in Headers */,
 				E267FD941BE804E200F86B42 /* XLFormStepCounterCell.h in Headers */,
@@ -514,6 +521,7 @@
 				6442F6511C1FC3AA00C9152F /* XLFormImageCell.m in Sources */,
 				E267FD971BE804E200F86B42 /* XLFormSwitchCell.m in Sources */,
 				E267FDC61BE804E200F86B42 /* XLForm.m in Sources */,
+				CAD00DC821E84C37006AEF12 /* XLScrollCell.m in Sources */,
 				E267FD891BE804E200F86B42 /* XLFormInlineSelectorCell.m in Sources */,
 				E267FDA71BE804E200F86B42 /* XLFormRowDescriptor.m in Sources */,
 			);
