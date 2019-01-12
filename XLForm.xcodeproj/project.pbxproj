@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6442F6501C1FC3AA00C9152F /* XLFormImageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6442F64E1C1FC3AA00C9152F /* XLFormImageCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6442F6511C1FC3AA00C9152F /* XLFormImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6442F64F1C1FC3AA00C9152F /* XLFormImageCell.m */; };
-		CAD00DC721E84C37006AEF12 /* XLScrollCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD00DC521E84C37006AEF12 /* XLScrollCell.h */; };
+		CAD00DC721E84C37006AEF12 /* XLScrollCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD00DC521E84C37006AEF12 /* XLScrollCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAD00DC821E84C37006AEF12 /* XLScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD00DC621E84C37006AEF12 /* XLScrollCell.m */; };
 		CAD6586E21E4345700F33F22 /* XLFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD6586C21E4345700F33F22 /* XLFormDataSource.m */; };
 		CAD6586F21E4345700F33F22 /* XLFormDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CAD6586D21E4345700F33F22 /* XLFormDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -385,7 +385,6 @@
 				E267FD821BE804E200F86B42 /* XLFormDateCell.h in Headers */,
 				E267FD801BE804E200F86B42 /* XLFormCheckCell.h in Headers */,
 				E267FD8E1BE804E200F86B42 /* XLFormSegmentedCell.h in Headers */,
-				CAD00DC721E84C37006AEF12 /* XLScrollCell.h in Headers */,
 				E267FD8A1BE804E200F86B42 /* XLFormLeftRightSelectorCell.h in Headers */,
 				E267FD921BE804E200F86B42 /* XLFormSliderCell.h in Headers */,
 				E267FD941BE804E200F86B42 /* XLFormStepCounterCell.h in Headers */,
@@ -413,6 +412,7 @@
 				6442F6501C1FC3AA00C9152F /* XLFormImageCell.h in Headers */,
 				CAD6586F21E4345700F33F22 /* XLFormDataSource.h in Headers */,
 				CAD6587221E43D0400F33F22 /* ExpandFormSectionDescriptor.h in Headers */,
+				CAD00DC721E84C37006AEF12 /* XLScrollCell.h in Headers */,
 				E267FDA01BE804E200F86B42 /* XLFormRowDescriptorViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
