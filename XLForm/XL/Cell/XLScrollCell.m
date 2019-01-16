@@ -115,7 +115,12 @@
         //水平方向计算水平垂直偏移量
         if (!self.bLayoutVertical) {
             //水平偏移量
-            x += viewWidth + self.itemOfset;
+            //最后一位不需要加上itemOfset
+            if(i == datas.count - 1){
+                x += viewWidth;
+            } else {
+                x += viewWidth + self.itemOfset;
+            }
         }
         
         view.autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
