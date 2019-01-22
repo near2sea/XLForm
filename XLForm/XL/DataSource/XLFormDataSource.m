@@ -482,4 +482,9 @@
     }
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.tableView endEditing:YES];
+}
+
 @end
