@@ -143,28 +143,28 @@
 {
     if (formRow.sectionDescriptor.sectionOptions & XLFormSectionOptionCanInsert){
         if (formRow.sectionDescriptor.sectionInsertMode == XLFormSectionInsertModeButton){
-            return UITableViewRowAnimationAutomatic;
+            return UITableViewRowAnimationNone;
         }
         else if (formRow.sectionDescriptor.sectionInsertMode == XLFormSectionInsertModeLastRow){
             return YES;
         }
     }
-    return UITableViewRowAnimationFade;
+    return UITableViewRowAnimationNone;
 }
 
 -(UITableViewRowAnimation)deleteRowAnimationForRow:(XLFormRowDescriptor *)formRow
 {
-    return UITableViewRowAnimationFade;
+    return UITableViewRowAnimationNone;
 }
 
 -(UITableViewRowAnimation)insertRowAnimationForSection:(XLFormSectionDescriptor *)formSection
 {
-    return UITableViewRowAnimationAutomatic;
+    return UITableViewRowAnimationNone;
 }
 
 -(UITableViewRowAnimation)deleteRowAnimationForSection:(XLFormSectionDescriptor *)formSection
 {
-    return UITableViewRowAnimationAutomatic;
+    return UITableViewRowAnimationNone;
 }
 
 -(XLFormRowDescriptor *)formRowFormMultivaluedFormSection:(XLFormSectionDescriptor *)formSection
