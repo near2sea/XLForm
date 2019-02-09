@@ -260,22 +260,34 @@ NSString *const XLFormTextFieldMaxNumberOfCharacters = @"textFieldMaxNumberOfCha
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
-    return [self.formViewController textFieldShouldClear:textField];
+    if(self.formViewController){
+        return [self.formViewController textFieldShouldClear:textField];
+    }
+    return YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    return [self.formViewController textFieldShouldReturn:textField];
+    if(self.formViewController){
+        return [self.formViewController textFieldShouldReturn:textField];
+    }
+    return YES;
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    return [self.formViewController textFieldShouldBeginEditing:textField];
+    if(self.formViewController){
+        return [self.formViewController textFieldShouldBeginEditing:textField];
+    }
+    return YES;
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
-    return [self.formViewController textFieldShouldEndEditing:textField];
+    if(self.formViewController){
+        return [self.formViewController textFieldShouldEndEditing:textField];
+    }
+    return YES;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -287,14 +299,19 @@ NSString *const XLFormTextFieldMaxNumberOfCharacters = @"textFieldMaxNumberOfCha
         }
     }
 
-    // Otherwise, leave response to view controller
-    return [self.formViewController textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    if(self.formViewController){
+        // Otherwise, leave response to view controller
+        return [self.formViewController textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    }
+    return YES;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [self.formViewController beginEditing:self.rowDescriptor];
-    [self.formViewController textFieldDidBeginEditing:textField];
+    if(self.formViewController){
+        [self.formViewController beginEditing:self.rowDescriptor];
+        [self.formViewController textFieldDidBeginEditing:textField];
+    }
     // set the input to the raw value if we have a formatter and it shouldn't be used during input
     if (self.rowDescriptor.valueFormatter) {
         self.textField.text = [self.rowDescriptor editTextValue];
@@ -311,8 +328,10 @@ NSString *const XLFormTextFieldMaxNumberOfCharacters = @"textFieldMaxNumberOfCha
         self.textField.text = [self.rowDescriptor.value displayText];
     }
     
-    [self.formViewController endEditing:self.rowDescriptor];
-    [self.formViewController textFieldDidEndEditing:textField];
+    if(self.formViewController){
+        [self.formViewController endEditing:self.rowDescriptor];
+        [self.formViewController textFieldDidEndEditing:textField];
+    }
 }
 
 
