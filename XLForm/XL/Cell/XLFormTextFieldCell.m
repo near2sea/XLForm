@@ -34,8 +34,6 @@ NSString *const XLFormTextFieldMaxNumberOfCharacters = @"textFieldMaxNumberOfCha
 
 @interface XLFormTextFieldCell() <UITextFieldDelegate>
 
-@property NSMutableArray * dynamicCustomConstraints;
-
 @end
 
 @implementation XLFormTextFieldCell

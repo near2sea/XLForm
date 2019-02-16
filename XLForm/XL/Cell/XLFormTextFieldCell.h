@@ -37,4 +37,6 @@ extern NSString *const XLFormTextFieldMaxNumberOfCharacters;
 @property (nonatomic) NSNumber *textFieldLengthPercentage;
 @property (nonatomic) NSNumber *textFieldMaxNumberOfCharacters;
 
+@property (nonatomic, strong) NSMutableArray * dynamicCustomConstraints;
+
 @end
