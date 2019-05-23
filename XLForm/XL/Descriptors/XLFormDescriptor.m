@@ -345,7 +345,7 @@ NSString * const XLValidationStatusErrorKey = @"XLValidationStatusErrorKey";
     return nil;
 }
 
--(NSArray *)localValidationErrors:(XLFormViewController *)formViewController {
+-(NSArray *)localValidationErrors:(UIViewController *)formViewController {
     NSMutableArray * result = [NSMutableArray array];
     for (XLFormSectionDescriptor * section in self.formSections) {
         for (XLFormRowDescriptor * row in section.formRows) {

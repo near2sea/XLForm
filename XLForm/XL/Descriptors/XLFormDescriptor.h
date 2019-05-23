@@ -84,7 +84,7 @@ typedef NS_OPTIONS(NSUInteger, XLFormRowNavigationOptions) {
 -(nonnull NSDictionary *)formValues;
 -(nonnull NSDictionary *)httpParameters:(nonnull XLFormViewController *)formViewController;
 
--(nonnull NSArray *)localValidationErrors:(nonnull XLFormViewController *)formViewController;
+-(nonnull NSArray *)localValidationErrors:(UIViewController *)formViewController;
 -(void)setFirstResponder:(nonnull XLFormViewController *)formViewController;
 
 -(nullable XLFormRowDescriptor *)nextRowDescriptorForRow:(nonnull XLFormRowDescriptor *)currentRow;
