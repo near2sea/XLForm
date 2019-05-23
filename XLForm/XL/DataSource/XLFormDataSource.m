@@ -487,4 +487,10 @@
     [self.tableView endEditing:YES];
 }
 
+#pragma mark - Methods
+-(NSArray *)formValidationErrors
+{
+    return [self.form localValidationErrors:self];
+}
+
 @end
