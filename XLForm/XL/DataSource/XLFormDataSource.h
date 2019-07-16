@@ -44,4 +44,5 @@
 @property (nonatomic, weak) UITableView *tableView;
 
 - (instancetype)initWithViewController:(UIViewController *)viewController tableView:(UITableView *)tableView;
+- (instancetype)initWithTableView:(UITableView *)tableView;
 @end

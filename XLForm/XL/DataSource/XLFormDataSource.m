@@ -29,6 +29,11 @@
 
 @implementation XLFormDataSource
 
+- (instancetype)initWithTableView:(UITableView *)tableView
+{
+    return [self initWithViewController:nil tableView:tableView];
+}
+
 - (instancetype)initWithViewController:(UIViewController *)viewController tableView:(UITableView *)tableView
 {
     self = [super init];
@@ -48,9 +53,7 @@
     _form = form;
     _form.delegate = self;
     [_form forceEvaluate];
-    if ([self.viewController isViewLoaded]){
-        [self.tableView reloadData];
-    }
+    [self.tableView reloadData];
 }
 
 #pragma mark - XLFormDescriptorDelegate
