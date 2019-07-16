@@ -135,7 +135,7 @@
 -(void)didSelectFormRow:(XLFormRowDescriptor *)formRow
 {
     if ([[formRow cellForTableView:self.tableView] respondsToSelector:@selector(formDescriptorCellDidSelectedWithFormController:)]){
-        if (self.tableView && self.viewController) {
+        if (self.tableView) {
             [[formRow cellForTableView:self.tableView] formDescriptorCellDidSelectedWithFormController:self.viewController];
         }
     }
