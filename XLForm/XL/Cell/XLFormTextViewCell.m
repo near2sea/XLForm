@@ -37,9 +37,6 @@ NSString *const XLFormTextViewMaxNumberOfCharacters = @"textViewMaxNumberOfChara
 @end
 
 @implementation XLFormTextViewCell
-{
-    NSMutableArray * _dynamicCustomConstraints;
-}
 
 @synthesize textLabel = _textLabel;
 @synthesize textView = _textView;
@@ -150,18 +147,18 @@ NSString *const XLFormTextViewMaxNumberOfCharacters = @"textViewMaxNumberOfChara
 
 -(void)updateConstraints
 {
-    if (_dynamicCustomConstraints){
-        [self.contentView removeConstraints:_dynamicCustomConstraints];
-        [_dynamicCustomConstraints removeAllObjects];
+    if (self.dynamicCustomConstraints){
+        [self.contentView removeConstraints:self.dynamicCustomConstraints];
+        [self.dynamicCustomConstraints removeAllObjects];
     }
     NSDictionary * views = @{@"label": self.textLabel, @"textView": self.textView};
     if (!self.textLabel.text || [self.textLabel.text isEqualToString:@""]){
-        [_dynamicCustomConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[textView]-|" options:0 metrics:0 views:views]];
+        [self.dynamicCustomConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[textView]-|" options:0 metrics:0 views:views]];
     }
     else{
-        [_dynamicCustomConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[label]-[textView]-|" options:0 metrics:0 views:views]];
+        [self.dynamicCustomConstraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[label]-[textView]-|" options:0 metrics:0 views:views]];
         if (self.textViewLengthPercentage) {
-            [_dynamicCustomConstraints addObject:[NSLayoutConstraint constraintWithItem:_textView
+            [self.dynamicCustomConstraints addObject:[NSLayoutConstraint constraintWithItem:_textView
                                                                               attribute:NSLayoutAttributeWidth
                                                                               relatedBy:NSLayoutRelationEqual
                                                                                  toItem:self.contentView
@@ -170,7 +167,7 @@ NSString *const XLFormTextViewMaxNumberOfCharacters = @"textViewMaxNumberOfChara
                                                                                constant:0.0]];
         }
     }
-    [self.contentView addConstraints:_dynamicCustomConstraints];
+    [self.contentView addConstraints:self.dynamicCustomConstraints];
     [super updateConstraints];
 }
 
@@ -217,6 +214,14 @@ NSString *const XLFormTextViewMaxNumberOfCharacters = @"textViewMaxNumberOfChara
     
     // Otherwise, leave response to view controller
 	return [self.formViewController textView:textView shouldChangeTextInRange:range replacementText:text];
+}
+
+-(NSMutableArray *)dynamicCustomConstraints
+{
+    if(!_dynamicCustomConstraints){
+        _dynamicCustomConstraints = [NSMutableArray array];
+    }
+    return _dynamicCustomConstraints;
 }
 
 @end

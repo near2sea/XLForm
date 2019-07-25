@@ -39,4 +39,7 @@ extern NSString *const XLFormTextViewMaxNumberOfCharacters;
 @property (nonatomic) NSNumber *textViewLengthPercentage;
 @property (nonatomic) NSNumber *textViewMaxNumberOfCharacters;
 
+@property (nonatomic, strong) NSMutableArray *dynamicCustomConstraints;
+
+
 @end
